@@ -10,27 +10,27 @@
 
 <script lang="ts">
   export default {
-    name:'Person' //组件名
-    ,
-    data(){
-      return {
-        name:"张三",
-        age:18,
-        tele:"193588888888"
-      }
-    },
-    methods:{
-      showtel(){
-        alert(this.tele)
-      },
-      xgname(){
-        this.name = "zhengsan"
-      },
-      xgage(){
-        this.age += 1
-      }
-    }
+    name:'Person',
 
+    setup(){
+      //数据
+      let name = "张三"
+      let age = 18
+      let tel = '19353088888'
+
+      //方法
+      function xgname (){
+        name = 'zhang-san'
+      }
+      function xgage (){
+        age += 1
+      }
+      function showtel (){
+        alert(tel)
+      }
+
+      return {name,age,xgname,xgage,showtel}
+    }
   }
 </script>
 
