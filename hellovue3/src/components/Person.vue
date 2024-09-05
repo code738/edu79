@@ -10,9 +10,12 @@
 
 <script lang="ts">
   export default {
-    name:'Person',
+    name:'Person'
+  }
+</script>
 
-    setup(){
+<script lang="ts" setup>
+
       //数据
       let name = "张三"
       let age = 18
@@ -29,10 +32,8 @@
         alert(tel)
       }
 
-      return {name,age,xgname,xgage,showtel}
-    }
-  }
 </script>
+
 
 <style>
 
