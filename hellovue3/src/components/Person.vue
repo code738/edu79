@@ -15,18 +15,20 @@
 </script>
 
 <script lang="ts" setup>
-
+  import { ref } from 'vue'; 
+    
+  
       //数据
-      let name = "张三"
-      let age = 18
+      let name = ref("张三")
+      let age = ref(18)
       let tel = '19353088888'
 
       //方法
       function xgname (){
-        name = 'zhang-san'
+        name.value = 'zhang-san'
       }
       function xgage (){
-        age += 1
+        age.value += 1
       }
       function showtel (){
         alert(tel)
